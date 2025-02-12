@@ -7,9 +7,12 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: 'Docs with Tailwind',
+			title: 'Bilisound',
+			components: {
+				Hero: './src/components/Hero.astro',
+			},
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/bilisound',
 			},
 			sidebar: [
 				{
