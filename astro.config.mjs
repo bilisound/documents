@@ -27,10 +27,6 @@ export default defineConfig({
 					label: '用户手册',
 					autogenerate: { directory: 'guides' },
 				},
-				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
-				},
 			],
 			customCss: ['./src/tailwind.css'],
 		}),
