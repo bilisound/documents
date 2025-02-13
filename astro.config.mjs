@@ -8,9 +8,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Bilisound',
-			defaultLocale: 'default',
+			defaultLocale: 'root',
 			locales: {
-				default: {
+				root: {
 					label: '简体中文',
 					lang: 'zh-CN',
 				},
@@ -25,10 +25,6 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: '用户手册',
-					/*items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],*/
 					autogenerate: { directory: 'guides' },
 				},
 				{
