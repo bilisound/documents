@@ -10,6 +10,7 @@ export default defineConfig({
 			title: 'Bilisound',
 			components: {
 				Hero: './src/components/Hero.astro',
+				Footer: './src/components/Footer.astro',
 			},
 			social: {
 				github: 'https://github.com/bilisound',
