@@ -25,7 +25,10 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: '用户手册',
-					autogenerate: { directory: 'guides' },
+					items: [
+						{ label: "开始使用", slug: "guides/get-started" },
+						{ label: "常见问题", slug: "guides/faq" },
+					],
 				},
 			],
 			customCss: ['./src/tailwind.css'],
