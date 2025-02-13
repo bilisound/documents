@@ -1,0 +1,53 @@
+---
+title: 开始使用
+description: 介绍 Bilisound 的安装和上手使用方法
+---
+
+Bilisound 是一款第三方音乐播放器，它让收听和下载音乐变得更加简单和轻松。
+
+以下介绍不同版本客户端的安装方法。
+
+### Android（包括非 NEXT 版的 Harmony OS）用户
+
+1. 访问 [GitHub Releases 页面](https://github.com/bilisound/client-mobile/releases)
+2. 选择最新版本，下载 `bilisound-*-release.apk` 文件
+3. 在下载完成后：
+   - 需进入「设置 → 安全 → 安装未知应用」启用对应应用的安装权限
+   - 部分国产安卓系统可能需要关闭「安全守护」功能。不同手机的关闭方法各异，主流厂商的话可以参考一下 [这个视频](https://www.bilibili.com/video/BV1cF4m1c7sf/)。
+
+### iOS 用户
+
+⚠️ 由于本应用没有上架 App Store，目前需要自行编译安装。
+
+首先，确保你有一台 macOS 电脑，并正确安装了 Node.js 和 Xcode。将应用克隆到本地，并安装依赖：
+
+```bash
+git clone https://github.com/bilisound/client-mobile
+```
+
+然后，安装依赖，并初始化 ios 文件夹：
+
+```bash
+cd client-mobile/apps/mobile
+codepack enable
+pnpm install
+pnpm run prebuild
+```
+
+然后，通过 Xcode 打开 `mobile` 子项目中的 ios 原生项目：
+
+```bash
+xed ios/Bilisound.xcworkspace
+```
+
+打开以后，使用你自己的开发者证书签名，构建并安装到设备即可使用。
+
+### 替代方案
+
+📱 你可以直接使用浏览器访问 Bilisound Web 版：TODO
+
+- ✅ 无需安装
+- ❌ 不支持本地缓存
+- ❌ 部分功能（如后台播放）将会不可靠或完全不可用（取决于你使用的浏览器和操作系统的限制）
+
+如果条件允许，我们建议你使用 Bilisound 的手机客户端。
