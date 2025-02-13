@@ -26,7 +26,8 @@ export default defineConfig({
 				{
 					label: '用户手册',
 					items: [
-						{ label: "开始使用", slug: "guides/get-started" },
+						{ label: "安装", slug: "guides/get-started" },
+						{ label: "基础用法", slug: "guides/basic-usage" },
 						{ label: "常见问题", slug: "guides/faq" },
 					],
 				},
