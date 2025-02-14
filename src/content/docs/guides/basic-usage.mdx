@@ -7,12 +7,13 @@ import { Image } from 'astro:assets';
 import imageHome from "../../../assets/docs/guides/app-home-first.jpg";
 import imageQRShareExample2 from "../../../assets/docs/guides/qr-share-example-2.png";
 import imageQRShareExample3 from "../../../assets/docs/guides/qr-share-example-3.png";
+import imageResult from "../../../assets/docs/guides/app-result.jpg";
 
 ### 视频查询
 
 启动 Bilisound 以后，我们可以看见一个简单的查询输入框。在这里输入符合规范的视频链接或 ID，即可查询视频的详情，并开始播放选定视频的音频。
 
-<Image src={imageHome} alt="首页" style="max-width: 480px; height: auto;" />
+<Image src={imageHome} alt="首页" style="max-width: 400px; height: auto;" />
 
 目前，Bilisound 支持以下格式的视频链接或 ID：
 
@@ -35,3 +36,11 @@ import imageQRShareExample3 from "../../../assets/docs/guides/qr-share-example-3
 
 <Image src={imageQRShareExample3} alt={"生成的二维码"} />
 <small>生成的二维码，可供 Bilisound App 直接扫描。</small>
+
+随后，Bilisound App 会呈现查询结果，展示视频的基本信息和选集（分 P）列表。在这个界面，你可以：
+
+- 点击任意一个视频立刻开始播放，也可以长按将其加入到已有播放列表。
+- 通过这个视频创建一个歌单，包含该视频的全部选集（分 P）。
+- （仅限手机视图）点击视频简介展开完整简介内容，并选择复制视频简介内容。
+
+<Image src={imageResult} alt="查询结果" style="max-width: 400px; height: auto;" />
