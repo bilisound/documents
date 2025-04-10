@@ -28,6 +28,7 @@ export default defineConfig({
 					items: [
 						{ label: "安装", slug: "guides/get-started" },
 						{ label: "基础用法", slug: "guides/basic-usage" },
+						{ label: "数据管理", slug: "guides/backup" },
 						{ label: "常见问题", slug: "guides/faq" },
 					],
 				},
