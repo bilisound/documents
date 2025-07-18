@@ -1,0 +1,47 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from "../assets/160112G.png";
+---
+
+<div class="flex flex-col md:flex-row gap-8 md:h-[calc(100lvh-var(--sl-nav-height)-1.5rem+3rem)] md:min-h-[540px] md:max-h-[690px]">
+    <div class="flex-1 flex flex-col justify-center items-center gap-6 pt-16 pb-16 md:gap-8 md:pt-0 md:pb-12 md:items-stretch">
+        <h1 class="text-4xl md:text-5xl xl:text-6xl font-extrabold tracking-wider xl:tracking-widest dark:color-white">一起来听歌吧！</h1>
+        <p class="text-base md:text-xl">Bilisound 是一款第三方播放器，让收听和下载音乐变得更加简单和轻松。</p>
+        <div class="flex items-center gap-4">
+            <a href="https://github.com/bilisound/client-mobile/releases/latest" class="text-sm px-5 py-2.5 md:px-6 md:py-3 md:text-base no-underline font-medium text-white inline-flex items-center bg-accent-700 hover:bg-accent-800 focus:ring-4 focus:outline-none focus:ring-accent-300 rounded-lg text-center dark:bg-accent-600 dark:hover:bg-accent-700 dark:focus:ring-accent-800">
+                <svg class="size-3.5 md:size-4 me-2 md:me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="currentColor" d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v242.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352zm368 56a24 24 0 1 1 0 48a24 24 0 1 1 0-48"/></svg>
+                下载 App
+            </a>
+            <a href="https://app.bilisound.com" class="text-sm px-5 py-2.5 md:px-6 md:py-3 md:text-base no-underline text-accent-700 hover:text-white border border-accent-700 hover:bg-accent-800 focus:ring-4 focus:outline-none focus:ring-accent-300 font-medium rounded-lg inline-flex items-center text-center bg-transparent dark:border-accent-500 dark:text-accent-500 dark:hover:text-white dark:hover:bg-accent-500 dark:focus:ring-accent-800">
+                <svg class="size-3.5 md:size-4 me-2 md:me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512"><path fill="currentColor" d="M352 256c0 22.2-1.2 43.6-3.3 64H163.4c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.3c2.2 20.4 3.3 41.8 3.3 64m28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64m112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6c78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7c10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5c11.6 26 20.9 58.2 27 94.7m-209 0H18.6c30-74.1 93.6-130.9 172-151.6c-25.5 34.2-45.3 87.7-55.3 151.6M8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64m186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6c-10.5 23.6-22.2 40.7-33.5 51.5c-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6c-78.4-20.7-142-77.5-172-151.6zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6c25.5-34.2 45.2-87.7 55.3-151.6h116.7z"/></svg>
+                使用网页版
+            </a>
+        </div>
+    </div>
+    <div class="flex-1 flex relative after:absolute after:bg-gradient-to-t after:from-[var(--sl-color-bg)] after:to-transparent after:w-full after:h-12 after:left-0 after:bottom-0 after:content-['']">
+        <Image class="w-full h-[unset] object-contain object-[bottom_center]" src={heroImage} alt="Bilisound 看板娘" />
+    </div>
+</div>
+
+<style is:global>
+    header.header {
+        border-color: var(--bilisound-header-transparent, var(--sl-color-hairline-shade));
+        background-color: var(--bilisound-header-transparent, var(--sl-color-bg-nav));
+        transition: border-color 0.3s, background-color 0.3s;
+    }
+</style>
+
+<script>
+    const header = document.querySelector('header.header') as HTMLElement
+    const navTopStyle = () => {
+        const scroll = window.scrollY;
+        if (scroll > 32) {
+            header.style.removeProperty('--bilisound-header-transparent');
+        } else {
+            header.style.setProperty('--bilisound-header-transparent', 'transparent');
+        }
+    };
+
+    window.addEventListener('scroll', navTopStyle);
+    navTopStyle();
+</script>
