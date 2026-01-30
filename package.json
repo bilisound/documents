@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.34.1",
-    "@astrojs/starlight-tailwind": "^4.0.1",
-    "@tailwindcss/vite": "^4.1.4",
-    "astro": "^5.7.9",
-    "sharp": "^0.34.1",
-    "tailwindcss": "^4.1.4"
+    "@astrojs/starlight": "^0.37.4",
+    "@astrojs/starlight-tailwind": "^4.0.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18"
   },
-  "packageManager": "pnpm@10.10.0"
+  "packageManager": "pnpm@10.28.2"
 }
