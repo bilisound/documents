@@ -1,0 +1,50 @@
+---
+title: 基本用法
+description: Bilisound 的基本使用方法
+---
+
+import { Image } from "astro:assets";
+import imageHome from "../../../assets/docs/guides/app-home-first.jpg";
+import imageQRShareExample2 from "../../../assets/docs/guides/qr-share-example-2.png";
+import imageResult from "../../../assets/docs/guides/app-result.jpg";
+
+### 视频查询
+
+启动 Bilisound 以后，我们可以看见一个简单的查询输入框。在这里输入符合规范的视频链接或 ID，即可查询视频的详情，并开始播放选定视频的音频。
+
+<Image src={imageHome} alt="首页" style="max-width: 400px; height: auto;" />
+
+目前，Bilisound 支持以下格式的视频链接或 ID：
+
+- 纯数字的 av 号
+- `avXXXXXXXX`
+- `BVXXXXXXXX`
+- `https://www.example.com/video/avXXXXXXXX`
+- `https://www.example.com/video/BVXXXXXXXX`
+- `https://example.com/XXXXXXXX`（短链接格式。可以在链接前后跟随无关的文字，这样可以直接通过官方客户端分享链接，然后直接粘贴到输入框。）
+
+同时，你可以通过扫描二维码来查询视频。在电脑浏览器上打开视频详情页面，将鼠标移动到「分享」按钮，会出现下图所示的弹窗。你可以点击 Bilisound 应用首页右上角的「扫描二维码」按钮，扫描弹出的二维码。
+
+![扫描二维码](../../../assets/docs/guides/qr-share-example-1.png)
+
+<small>
+  分享页面会弹出的二维码。该二维码包含追踪参数，所以在文档页进行了打码处理。
+</small>
+
+另外，你也可以使用微软 Edge 浏览器提供的生成二维码功能。在视频页面右键，选择「为此页面创建 QR 代码」，然后扫描生成的二维码。
+
+<Image src={imageQRShareExample2} alt={"点击右键菜单生成二维码"} />
+<small>右键菜单选择「为此页面创建 QR 代码」。</small>
+
+随后，Bilisound App 会呈现查询结果，展示视频的基本信息和选集（分 P）列表。在这个界面，你可以：
+
+- 点击任意一个视频立刻开始播放，也可以长按将其加入到已有播放列表。
+- 通过这个视频创建一个歌单，包含该视频的全部选集（分 P）。
+- 点击视频简介展开完整简介内容，并选择复制视频简介内容。<br />此操作仅限手机视图，在平板视图下视频简介已完整展示，可直接复制。
+
+<Image
+  src={imageResult}
+  alt="查询结果"
+  style="max-width: 400px; height: auto;"
+/>
+<small>视频详情</small>
